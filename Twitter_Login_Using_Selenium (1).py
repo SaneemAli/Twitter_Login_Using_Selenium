@@ -70,7 +70,6 @@ class Twitterbot:
         next_button.click()
         time.sleep(3)
         
-        # Check if the Twitter login page is asking for the username after entering the email address
         username = bot.find_element(By.XPATH, "//input[@class='r-30o5oe r-1niwhzg r-17gur6a r-1yadl64 r-deolkf r-homxoj r-poiln3 r-7cikom r-1ny4l3l r-t60dpp r-1dz5y72 r-fdjqy7 r-13qz1uu']")
         username.send_keys(self.name)
         next_button = bot.find_element(By.XPATH, "//div[@class='css-901oao r-1awozwy r-6koalj r-18u37iz r-16y2uox r-37j5jr r-a023e6 r-b88u0q r-1777fci r-rjixqe r-bcqeeo r-q4m81j r-qvutc0']")
@@ -82,15 +81,12 @@ class Twitterbot:
         password.send_keys(self.password)
         login_button = bot.find_element(By.XPATH, '//div[@class="css-901oao r-1awozwy r-6koalj r-18u37iz r-16y2uox r-37j5jr r-a023e6 r-b88u0q r-1777fci r-rjixqe r-bcqeeo r-q4m81j r-qvutc0"]')
         login_button.click()
-        
-        # Wait for the page to load
         time.sleep(2)
 
 # Loop to ask the user if they want to tweet or not
         while True:
             user_input = input("Do you want to tweet? (y/n): ")
             if user_input == "y":
-        # Find the text area for entering a tweet
                 tweet_input = bot.find_element(By.XPATH,'//div[@class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"]')
 
         # Enter your tweet
