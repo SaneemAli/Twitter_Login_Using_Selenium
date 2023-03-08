@@ -110,7 +110,7 @@ class Twitterbot:
 
         
 
-f = Twitterbot("saneemali1@gmail.com", 'Hald1r@ms','Saneem_Ali')        
+f = Twitterbot("email", 'password','username')        
 f.login()
 
 
